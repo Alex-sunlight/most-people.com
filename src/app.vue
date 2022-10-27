@@ -7,6 +7,9 @@
       <router-link to="/notes">
         <span>{{ $t('Notes') }}</span>
       </router-link>
+      <router-link to="/h5">
+        <span>{{ $t('H5') }}</span>
+      </router-link>
     </div>
 
     <div class="right">
@@ -31,7 +34,7 @@ const toggleLocales = () => {
 
 <style lang="scss">
 #app {
-  padding: 0 16px;
+  // padding: 0 16px;
 
   > .mp-header {
     display: flex;
@@ -42,12 +45,14 @@ const toggleLocales = () => {
     .right {
       display: flex;
       align-items: center;
+
       a {
         cursor: pointer;
         padding: 20px 16px;
         height: 100%;
         display: flex;
         align-items: center;
+
         span {
           border-bottom: 2px dashed transparent;
         }
@@ -70,12 +75,14 @@ const toggleLocales = () => {
         cursor: pointer;
         line-height: 32px;
         opacity: 0.9;
+
         img {
           width: 32px;
           height: 32px;
           box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
           border-radius: 50%;
         }
+
         &:hover {
           opacity: 1;
         }
