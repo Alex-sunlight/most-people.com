@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div id="pages-h5">
     <div class="background1_Box flex">
       <img src="/h5/background1.png" class="background1" />
       <div class="background1Top_content_">
@@ -205,7 +205,91 @@
         </div>
       </div>
     </div>
-    <div class="background6_Box flex"></div>
+    <div class="background6_Box flex">
+      <div class="background6">
+        <div class="background6_bt_box">
+          <el-button
+            @click="binClick1"
+            style="width: 140px; height: 54px"
+            color="#626aef"
+            :dark="isDark"
+            plain
+            >Plain</el-button
+          >
+          <el-button
+            @click="binClick2"
+            style="width: 201px; height: 54px"
+            color="#626aef"
+            :dark="isDark"
+            plain
+            >Plain</el-button
+          >
+          <el-button
+            @click="binClicks"
+            style="width: 270px; height: 54px"
+            color="#626aef"
+            :dark="isDark"
+            plain
+            >Plain</el-button
+          >
+        </div>
+        <div v-if="background6 === 1">
+          <div class="background6_c1_box bt">
+            <div class="background6_c1">
+              <div class="background6_c1_s1">
+                <div>Stable and secure key management</div>
+              </div>
+              <div class="background6_c1_s2">MPC-TSS</div>
+              <div class="background6_c1_s3">
+                <div>
+                  采用 TSS（Threshold Signature Scheme）进行 Masterkey 管理，需要用户及 UniPass
+                  双方进行交互后，方可安全地签名交易。这里 Masterkey
+                  后续可以被替换成用户能够独立管理的密钥，如 EOA 账户、硬件钱包甚至另一个智能合约。
+                </div>
+              </div>
+              <el-button class="background6_c1_bt">Know More</el-button>
+            </div>
+            <img src="/h5/background6_img1.png" class="background6_img1" />
+          </div>
+        </div>
+        <div v-if="background6 === 2">
+          <div class="background6_c1_box bt">
+            <div class="background6_c1">
+              <div class="background6_c1_s1">
+                <div>便捷且可信的社交恢复能力</div>
+              </div>
+              <div class="background6_c1_s2">Verify DKIM On-chain</div>
+              <div class="background6_c1_s3">
+                <div>
+                  将 DKIM
+                  数字签名的验签方法写在链上智能合约中，实现邮箱管理合约钱包的功能，与此同时，根据不同策略的设置，如添加守护邮箱及设置时间锁等，实现便捷且可信的钱包社交恢复功能。
+                </div>
+              </div>
+              <el-button class="background6_c1_bt">Know More</el-button>
+            </div>
+            <img src="/h5/background6_img2.png" class="background6_img1" />
+          </div>
+        </div>
+        <div v-if="background6 === 3">
+          <div class="background6_c1_box bt">
+            <div class="background6_c1">
+              <div class="background6_c1_s1">
+                <div>始终在意您的链上隐私</div>
+              </div>
+              <div class="background6_c1_s2">Zero-knowledge Proof</div>
+              <div class="background6_c1_s3">
+                <div>
+                  用户完整的邮箱信息永远不会在区块链中暴露。隐私信息的传输、记录及验证，均通过
+                  ZK-Proof 处理后进行，避免了攻击者通过钓鱼或者社工手段对合约钱包进行攻击。
+                </div>
+              </div>
+              <el-button class="background6_c1_bt">Know More</el-button>
+            </div>
+            <img src="/h5/background6_img3.png" class="background6_img1" />
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="background7_Box flex">
       <div class="background7 cl">
         <div class="background7_topS">
@@ -220,13 +304,132 @@
               <div class="background7_size">Powerful For Multi-</div>
               <div class="background7_size">platform</div>
             </div>
-            <div>
-              <el-button></el-button>
-              <el-button></el-button>
-              <el-button></el-button>
-              <el-button></el-button>
+            <div style="margin-top: 50px">
+              <div class="bt">
+                <el-button class="background7_bt"
+                  ><i style="margin-right: 5px"> <img src="/h5/background7_icon1.png" /></i> Android
+                  SDK</el-button
+                >
+                <el-button class="background7_bt"
+                  ><i style="margin-right: 5px"> <img src="/h5/background7_icon2.png" /></i> iOS
+                  SDK</el-button
+                >
+              </div>
+              <br />
+              <div class="bt">
+                <el-button class="background7_bt"
+                  ><i style="margin-right: 5px"> <img src="/h5/background7_icon3.png" /></i> Web
+                  SDK</el-button
+                >
+                <el-button class="background7_bt"
+                  ><i style="margin-right: 5px"> <img src="/h5/background7_icon4.png" /></i> JS
+                  SDK</el-button
+                >
+              </div>
+            </div>
+            <div class="cl" style="margin-top: 50px">
+              <div class="flex">
+                <a
+                  style="color: #fff"
+                  target="_blank"
+                  href="https://www.google.com/search?q=%E7%99%BE%E5%BA%A6&oq=%E7%99%BE%E5%BA%A6&aqs=chrome..69i57j46i199i465i512j35i39j0i512l2j69i61l3.1864j0j7&sourceid=chrome&ie=UTF-8"
+                  >Build Now</a
+                >
+                <img src="/h5/background7_jump.png" class="background7_jump" />
+              </div>
+
+              <img src="/h5/background7_line.png" class="background7_line" />
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="background8_Box flex">
+      <img src="/h5/background8_left.png" class="background8_left" />
+      <div>
+        <div class="background8_s1">Support Multi-chain</div>
+        <div class="background8_s2">
+          <div>Support multi-chain and custom modules Connect your dApp to the</div>
+          <div>blockchain to onboarding users in minutes</div>
+        </div>
+        <img src="/h5/background8_tree.png" class="background8_tree" />
+      </div>
+      <img src="/h5/background8_right.png" class="background8_right" />
+    </div>
+    <div class="background9_Box flex">
+      <div class="background9 bt">
+        <div>
+          <div class="background9_s1">Usecase</div>
+          <div class="background9_s2">GameFi Onboarding</div>
+          <div class="background9_s3">Coming soon</div>
+          <el-button class="background9_bt">Know More</el-button>
+        </div>
+        <img src="/h5/null.png" class="background9_img" />
+      </div>
+    </div>
+    <div class="background10_Box flex">
+      <div class="background10 cl">
+        <div class="background10_s1">Backed by the Best</div>
+        <div class="cl S_box">
+          <div class="bt S_box1">
+            <img src="/h5/background10_i1.png" style="width: 368px" />
+            <img src="/h5/background10_i2.png" style="width: 368px" />
+            <img src="/h5/background10_i3.png" style="width: 368px" />
+          </div>
+          <div class="bt S_box1">
+            <img src="/h5/background10_i4.png" style="width: 368px" />
+            <img src="/h5/background10_i5.png" style="width: 368px" />
+            <img src="/h5/background10_i6.png" style="width: 368px" />
+          </div>
+          <div class="flex S_box1">
+            <img src="/h5/background10_i7.png" style="width: 368px" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="/h5/background10_btImg.png" style="width: 100%; margin-top: -200px" />
+    <div class="h5_bottom bt">
+      <div class="a1_box">
+        <div class="flex">
+          <img src="/h5/union.png" style="width: 40px" />
+          <img src="/h5/unipass_s.png" style="width: 140px" />
+        </div>
+        <div class="h5_bottom_a1">
+          <div>A SEEDLESS and GASLESS User Experience for Your</div>
+          <div>Web3 Apps</div>
+        </div>
+        <div class="flex">
+          <img src="/h5/discord.png" class="h5_bottom_img1" />
+          <img src="/h5/Twitter.png" class="h5_bottom_img" />
+          <img src="/h5/Githubs.png" class="h5_bottom_img" />
+          <img src="/h5/Youtube.png" class="h5_bottom_img" />
+        </div>
+      </div>
+      <div class="a1_box">
+        <div class="b1_s">About Us</div>
+        <br />
+
+        <div class="b2_s">
+          <div>Features</div>
+          <br />
+          <div>Solutions</div>
+          <br />
+
+          <div>FAQ</div>
+        </div>
+      </div>
+      <div class="a1_box">
+        <div class="b1_s">Features</div>
+        <br />
+
+        <div class="b2_s">
+          <div>Documentation</div>
+          <br />
+
+          <div>Demo</div>
+          <br />
+
+          <div>How it works</div>
         </div>
       </div>
     </div>
@@ -234,9 +437,248 @@
 </template>
 
 <script setup lang="ts">
+import { Delete, Edit, Search, Share, Upload } from '@element-plus/icons-vue'
 useHead({ title: computed(() => $t('Notes')) })
+const background6 = ref(1)
+const binClick1 = () => {
+  background6.value = 1
+  console.log(background6, '111111111')
+}
+const binClick2 = () => {
+  background6.value = 2
+  console.log(background6, '22222222222')
+}
+const binClicks = () => {
+  background6.value = 3
+  console.log(background6, '33333333')
+}
 </script>
 <style lang="scss">
+#pages-h5 {
+  background-color: #18181e;
+}
+// background6
+.background6_Box {
+  width: 100%;
+  margin-top: 300px;
+}
+.background6 {
+  width: 100%;
+  max-width: 1200px;
+}
+.background6_img1 {
+  width: 450px;
+  height: 450px;
+}
+.background6_c1_s1 {
+  margin-top: 60px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 76px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.background6_c1_s2 {
+  margin-top: 40px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 68px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.background6_c1_s3 {
+  margin-top: 28px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.800286);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.background6_c1_bt {
+  width: 180px;
+  height: 54px;
+  background: linear-gradient(95.14deg, #b18cff 0%, #8864ff 100%);
+  border-radius: 12px;
+  border: 0;
+  color: #fff;
+  margin-top: 60px;
+}
+// background6
+// h5_bottom
+.h5_bottom {
+  width: 100%;
+}
+.h5_bottom_a1 {
+  margin-top: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.a1_box {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+}
+.h5_bottom_img1 {
+  margin-top: 20px;
+}
+.h5_bottom_img {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.b1_s {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.b2_s {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+// h5_bottom
+// background10_Box
+.background10_Box {
+  width: 100%;
+  margin-top: 300px;
+}
+.background10 {
+  width: 100%;
+  max-width: 1200px;
+}
+.background10_s1 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 76px;
+  text-align: center;
+  color: #ffffff;
+}
+.S_box {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 100px;
+}
+.S_box1 {
+  margin: 20px 10px;
+}
+// background10_Box
+// background9_Box
+.background9_Box {
+  width: 100%;
+  margin-top: 300px;
+}
+.background9 {
+  width: 100%;
+  max-width: 1200px;
+}
+.background9_bt {
+  width: 180px;
+  height: 60px;
+  margin-top: 70px;
+  background: linear-gradient(95.14deg, #b18cff 0%, #8864ff 100%);
+  border-radius: 12px;
+  border: 0;
+  color: #fff;
+}
+.background9_s1 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 76px;
+  color: #ffffff;
+}
+.background9_s2 {
+  margin-top: 16px;
+  white-space: nowrap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 64px;
+  color: #ad94ff;
+}
+.background9_s3 {
+  margin-top: 28px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.800286);
+}
+.background9_img {
+  width: 580px;
+  height: 364px;
+}
+// background9_Box
+// background8_Box
+.background8_Box {
+  width: 100%;
+  height: 100%;
+  margin-top: 304px;
+}
+.background8_left {
+  width: 294px;
+  height: 890px;
+}
+.background8_right {
+  width: 289.52px;
+  height: 777px;
+}
+.background8_tree {
+  width: 1200px;
+  margin-top: 74px;
+}
+.background8_s1 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 76px;
+  text-align: center;
+  background: linear-gradient(180deg, #b18cff 27.5%, #8864ff 108.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.background8_s2 {
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.800286);
+}
+// background8_Box
 // background7
 .background7_Box {
   width: 100%;
@@ -246,6 +688,7 @@ useHead({ title: computed(() => $t('Notes')) })
 .background7 {
   width: 100%;
   margin-top: 300px;
+  max-width: 1200px;
 }
 .background7_topS {
   font-family: 'Open Sans';
@@ -269,18 +712,37 @@ useHead({ title: computed(() => $t('Notes')) })
   color: #ffffff;
 }
 .imgBox {
-  max-width: 1200px;
+  max-width: 1200px !important;
   margin-top: 100px;
 }
 .background7_img {
   width: 580px;
   height: 360px;
 }
-// background7
-// background6
-.background6_Box {
+.background7_bt {
+  width: 220px;
+  height: 68px;
+  background: linear-gradient(
+    146.76deg,
+    rgba(227, 209, 255, 0.2) 0%,
+    rgba(169, 117, 255, 0.16) 54.69%,
+    rgba(148, 83, 255, 0.1) 100%
+  );
+  color: #fff;
+  border-radius: 12px;
+  border: 0;
 }
-// background6
+.background7_jump {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.background7_line {
+  width: 115px;
+  height: 2px;
+}
+// background7
+
 // background5
 .background5_Box {
   width: 100%;
@@ -344,7 +806,7 @@ useHead({ title: computed(() => $t('Notes')) })
   top: 20px;
 }
 .background4Im2 {
-  max-width: 1000px;
+  max-width: 1200px;
   max-height: 338.06px;
   position: absolute;
   z-index: 0;
@@ -533,7 +995,7 @@ useHead({ title: computed(() => $t('Notes')) })
 }
 .background1Top_content_ {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 0 10px;
   top: 40px;
   z-index: 10;
@@ -698,7 +1160,7 @@ useHead({ title: computed(() => $t('Notes')) })
 }
 .background2_content {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   position: absolute;
   z-index: 10;
 }
@@ -726,7 +1188,7 @@ useHead({ title: computed(() => $t('Notes')) })
 }
 .bt {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
